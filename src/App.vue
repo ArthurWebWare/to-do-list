@@ -1,11 +1,9 @@
 <template>
   <div id="app">
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">page-header</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>ToDo List<span class="nt">&lt;/h1&gt;</span>
-    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>An expample of business sheet <span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-
-    <span class="nt">&lt;router-view/&gt;</span>
+    <div class="page-header">
+      <h1>Todo on Vue</h1>
+      <p class="lead">An test project based on VueJS and Vuex</p>
+    </div>
     <router-view/>
   </div>
 </template>
