@@ -1,8 +1,8 @@
 <template>
   <div class="navbar">
     <div class="btn-group" role="group" aria-label="Menu">
-      <router-link to="/board">Board</router-link>
-      <router-link to="/backlog">Backlog</router-link>
+      <router-link to="/board" :class="buttonClass('/board')">Board</router-link>
+      <router-link to="/backlog" :class="buttonClass('/backlog')">Backlog</router-link>
     </div>
   </div>
 </template>
