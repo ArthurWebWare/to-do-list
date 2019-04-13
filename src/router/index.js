@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Backlog from '@/components/Backlog'
+import TodoBoard from '@/components/TodoBoard'
 
 Vue.use(Router)
 
@@ -12,8 +13,12 @@ export default new Router({
       component: Backlog
     },
     {
+      path: '/board',
+      component: TodoBoard
+    },
+    {
       path: '*',
-      redirect: 'backlog'
+      redirect: '/backlog'
     }
   ]
 })

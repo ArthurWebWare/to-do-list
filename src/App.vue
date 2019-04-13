@@ -4,13 +4,18 @@
       <h1>Todo on Vue</h1>
       <p class="lead">An test project based on VueJS and Vuex</p>
     </div>
+    <nav-bar></nav-bar>
     <router-view/>
   </div>
 </template>
 
 <script>
+import NavBar from '@/components/NavBar'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    'nav-bar': NavBar
+  }
 }
 </script>
 
