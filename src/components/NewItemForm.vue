@@ -9,22 +9,22 @@
 <script>
 export default {
   name: 'NewItemForm',
-  data() {
+  data () {
     return {
       itemText: ''
-    };
+    }
   },
   methods: {
-    submitForm() {
+    submitForm () {
       if (this.itemText) {
         this.$store.commit('addItem', {
           text: this.itemText
-        });
-        this.itemText = '';
+        })
+        this.itemText = ''
       }
     }
   }
-};
+}
 </script>
 
 <style>
