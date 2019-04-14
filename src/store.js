@@ -6,7 +6,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     items: {
-      todo: []
+      todo: [],
+      inProgress: [],
+      done: []
     },
     nextId: 1
   },
@@ -15,6 +17,9 @@ export default new Vuex.Store({
     addItem (state, item) {
       state.items.todo.push(Object.assign(item, {id: state.nextId}))
       state.nextId += 1
+    },
+    updateItems (state, payload) {
+      state.items[payload.id] = payload.items
     }
   }
 })

@@ -23,7 +23,32 @@ export default {
     'new-item': NewItemForm
   },
   computed: mapState({
-    items: s => s.items.todo
+    items: s => [...s.items.todo, ...s.items.inProgress, ...s.items.done]
   })
+}
+
+const badgeDetail = {
+  todo: {
+    text: 'to-do',
+    class: 'badge badge-light'
+  },
+  inProgress: {
+    text: 'in progress',
+    class: 'badge badge-info'
+  },
+  done: {
+    text: 'done',
+    class: 'badge badge-success'
+  },
+  methods: {
+    itemCard (item) {
+      if (this.$store.state.items.todo.includes(item)) {
+        return 'todo'
+      } else if (this.$store.state.items.inProgress.includes(item)) {
+        return 'inProgress'
+      }
+      return 'done'
+    }
+  }
 }
 </script>
