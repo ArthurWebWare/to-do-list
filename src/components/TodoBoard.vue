@@ -19,7 +19,7 @@ import {mapState} from 'vuex'
 import TaskCard from './TaskCard'
 export default {
   name: 'TodoBoard',
-  component: {
+  components: {
     'task-card': TaskCard
   },
   computed: mapState({

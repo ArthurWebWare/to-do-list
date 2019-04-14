@@ -2,9 +2,9 @@
 <div class="card">
   <h3 class="card-header">{{title}}</h3>
   <div class="card-body">
-    <draggable v-model="draggables" :options="{group: 'default'}">
+    <draggable v-model="draggables" group="default">
       <div v-for="item in items" :key="item.id">
-        <item :item="item"></item>
+          <item :item="item"></item>
       </div>
     </draggable>
   </div>
@@ -29,17 +29,17 @@ export default {
       if (!this.items) return ''
       if (this.items.length === 1) return '1 task'
       return `${this.items.length} tasks`
-    }
-  },
-  draggables: {
-    get () {
-      return this.itmes
     },
-    set (items) {
-      this.$store.commit('updateItems', {
-        items,
-        id: this.id
-      })
+    draggables: {
+      get () {
+        return this.itmes
+      },
+      set (items) {
+        this.$store.commit('updateItems', {
+          items,
+          id: this.id
+        })
+      }
     }
   }
 }
